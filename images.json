@@ -1,0 +1,22 @@
+{
+    "images": [
+        {
+            "imgPath": "img/places/placeholder.jpg",
+            "imgLocation": "West Reading, Pennsylvania",
+            "description": "Known for her storytelling in pop and country music, Swift has built a massive global following with albums that explore themes of love, heartbreak, and personal growth.",
+            "birthday": "12/13/1989"
+        },
+        {
+            "imgPath": "img/places/placeholder2.png",
+            "imgLocation": "Hawthorne, California",
+            "description": "A boundary-pushing rapper and producer, Tyler is celebrated for his unique style, humor, and evolving musicality in projects that range from provocative to introspective.",
+            "birthday": "03/06/1991"
+        },
+        {
+            "imgPath": "img/places/bruno-mars.png",
+            "imgLocation": "Honolulu, Hawaii",
+            "description": "With his retro-inspired style and powerful vocals, Mars fuses pop, R&B, and funk, producing energetic hits that channel classic influences with modern flair.",
+            "birthday": "10/08/1985"
+        }
+    ]
+}
