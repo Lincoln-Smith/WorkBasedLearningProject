@@ -1,56 +1,52 @@
-  /* General Styles */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-main {
+#about-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 20px;
+    border-radius: 15px;
 }
 
-/* Carousel Styles */
-.carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-    height: 400px; /* Define a fixed height for the carousel */
+#jerseyShoreCandleNav {
+    font-size: 3rem;
+    font-weight: bold;
 }
 
-.carousel {
-    display: flex;
-    transition: transform 1s ease;
+
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #efefef; 
 }
 
-.carousel-item {
-    min-width: 100%;
-    height: 100%;
+.navbar .navbar-nav .nav-link {
+    color: #aebdac; 
+    font-weight: 600; 
+    font-size: 18px;
 }
 
-.carousel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #8a9f90; 
 }
 
-/* Add responsiveness */
-@media (max-width: 768px) {
-    .carousel-container {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+#promo-banner {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000; 
+    background-color: #aebdac; 
 }
 
-/* For very small screens, stack carousel on top */
-@media (max-width: 480px) {
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .carousel-container {
-        margin-bottom: 15px;
-    }
+.test-background {
+    background-image: url('img/woodBackground.avif'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: rgb(0, 0, 0); 
+    padding: 50px 0; 
+    font-size: 2rem;
+}
+
+.test-background2 {
+    background-image: url('img/sandBackground.avif'); 
+
 }
