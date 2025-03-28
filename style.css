@@ -1,3 +1,38 @@
+/* Updated CSS for Product Section Centering */
+.product-section {
+    position: relative;
+    background-image: url('img/woodBackground.avif'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+}
+
+.product-section-content {
+    max-width: 1000px; /* Increased width */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.bigger-bold-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.normal-text {
+    font-weight: normal;
+}
+
+/* About Section */
 #about-section {
     background-size: cover;
     background-position: center;
@@ -6,11 +41,11 @@
     border-radius: 15px;
 }
 
+/* Navbar Styling */
 #jerseyShoreCandleNav {
     font-size: 3rem;
     font-weight: bold;
 }
-
 
 .navbar {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -23,11 +58,11 @@
     font-size: 18px;
 }
 
-
 .navbar .navbar-nav .nav-link:hover {
     color: #8a9f90; 
 }
 
+/* Promo Banner */
 #promo-banner {
     font-size: 1.2rem;
     font-weight: bold;
@@ -35,18 +70,7 @@
     background-color: #aebdac; 
 }
 
-.test-background {
-    background-image: url('img/woodBackground.avif'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    color: rgb(0, 0, 0); 
-    padding: 50px 0; 
-    font-size: 2rem;
-}
-
+/* Background for About Section Container */
 .test-background2 {
-    background-image: url('img/sandBackground.avif'); 
-
+    background-image: url('img/sandBackground.jpg'); 
 }
