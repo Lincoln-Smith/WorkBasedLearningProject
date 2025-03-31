@@ -1,47 +1,31 @@
-/* Updated CSS for Product Section Centering */
+/* ===== Base Styles ===== */
 .product-section {
     position: relative;
     background-image: url('img/woodBackground.avif'); 
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     padding: 50px 0;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: #000;
     font-size: 2rem;
 }
 
 .product-section-content {
-    max-width: 1000px; /* Increased width */
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
 }
 
-.bold-text {
-    font-weight: bold;
-}
-
+/* ===== Typography ===== */
+.bold-text { font-weight: bold; }
 .bigger-bold-text {
     font-weight: bold;
     font-size: 1.5rem;
 }
 
-.normal-text {
-    font-weight: normal;
-}
-
-/* About Section */
-#about-section {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px;
-    border-radius: 15px;
-}
-
-/* Navbar Styling */
+/* ===== Navigation ===== */
 #jerseyShoreCandleNav {
     font-size: 3rem;
     font-weight: bold;
@@ -62,15 +46,221 @@
     color: #8a9f90; 
 }
 
-/* Promo Banner */
+/* ===== Promo Banner ===== */
 #promo-banner {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #000000; 
+    color: #000; 
     background-color: #aebdac; 
 }
 
-/* Background for About Section Container */
+/* ===== Background Sections ===== */
 .test-background2 {
-    background-image: url('img/sandBackground.jpg'); 
+    background-image: url('img/sandBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+/* ===== Video Container ===== */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== Image + Text Section ===== */
+.image-text-section {
+    padding: 30px 0;
+}
+
+.thick-heading {
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.sub-heading {
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.img-fluid.rounded {
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== Bullet Points ===== */
+.bullet-points {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.bullet-points li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.bullet-points li:before {
+    content: "•";
+    color: #aebdac;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* ===== Buttons ===== */
+.btn-shop {
+    background-color: transparent;
+    border: 3px solid #495057;
+    color: #495057;
+    padding: 8px 22px;
+    font-weight: 600;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.btn-shop:hover {
+    background-color: #aebdac;
+    border-color: #aebdac;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ===== About Section ===== */
+.about-section-content {
+    padding: 3rem 0;
+}
+
+.about-headline {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.about-headline h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.about-headline h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #495057;
+    margin-bottom: 1rem;
+}
+
+.about-main-content {
+    align-items: stretch;
+    --bs-gutter-x: 3rem;
+}
+
+.about-carousel {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.about-text-content {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-subheading {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #495057;
+}
+
+.about-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.about-description p {
+    margin-bottom: 1.2rem;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+    .thick-heading {
+        font-size: 1.8rem;
+    }
+    
+    .sub-heading {
+        font-size: 1.1rem;
+    }
+    
+    .about-headline h1 {
+        font-size: 2.2rem;
+    }
+    
+    .about-headline h2 {
+        font-size: 1.4rem;
+    }
+    
+    .about-main-content {
+        --bs-gutter-x: 1.5rem;
+    }
+    
+    .about-text-content {
+        padding: 1.5rem 0;
+    }
+}
+/* Updated Button Styles */
+.btn-shop {
+    background-color: transparent;
+    border: 3px solid #495057;
+    color: #495057;
+    padding: 6px 16px; /* Reduced padding */
+    font-weight: 600;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9rem; /* Slightly smaller font */
+    line-height: 1.5;
+    min-width: 120px; /* Reduced minimum width */
+    text-align: center;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* First button in about section */
+.about-text-content .btn-shop {
+    margin-top: 1rem;
+    align-self: flex-start;
 }
