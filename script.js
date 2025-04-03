@@ -1,26 +1,22 @@
-function loadVideo(el) {
-    el.innerHTML = `<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen></iframe>`;
+// FAQ message functions only
+function showFaqMessage(message) {
+  const messageElement = document.getElementById('faq-message');
+  messageElement.textContent = message;
+  messageElement.style.display = 'block';
+  
+  // Hide message after 5 seconds
+  setTimeout(() => {
+    messageElement.style.display = 'none';
+  }, 5000);
 }
 
-function showFaqMessage(message) {
-    const messageElement = document.getElementById('faq-message');
-    messageElement.textContent = message;
-    messageElement.style.display = 'block';
-    
-    // Hide message after 5 seconds
-    setTimeout(() => {
-      messageElement.style.display = 'none';
-    }, 5000);
+document.addEventListener('click', function(e) {
+  if (!e.target.classList.contains('faq-item')) {
+    document.getElementById('faq-message').style.display = 'none';
   }
-  
-  // Optional: Close message when clicking anywhere
-  document.addEventListener('click', function(e) {
-    if (!e.target.classList.contains('faq-item')) {
-      document.getElementById('faq-message').style.display = 'none';
-    }
-  });
+});
 
-  let currentMessageTimeout = null;
+let currentMessageTimeout = null;
 
 function showFaqMessage(message) {
   const messageElement = document.getElementById('faq-message');

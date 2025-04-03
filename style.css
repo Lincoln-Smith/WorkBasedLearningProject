@@ -395,3 +395,61 @@ html, body {
       padding: 30px 0 15px;
     }
   }
+/* Shop Page Specific Styles */
+.shop-scents-page .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Needed for absolute positioning of footer */
+  min-height: 500px; /* Minimum card height */
+}
+
+.shop-scents-page .carousel-container {
+  height: 350px; /* Fixed height for image area */
+  overflow: hidden;
+  position: relative;
+}
+
+.shop-scents-page .carousel {
+  height: 100%;
+  margin-bottom: 0; /* Remove default margin */
+}
+
+.shop-scents-page .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 15px;
+}
+
+/* Card Content Area */
+.shop-scents-page .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px; /* Space for fixed footer */
+}
+
+/* Fixed Footer at Bottom */
+.shop-scents-page .card-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white; /* Match your card background */
+  padding: 15px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .shop-scents-page .carousel-container {
+    height: 300px;
+  }
+  
+  .shop-scents-page .card {
+    min-height: 450px;
+  }
+}
+
+/* Keep all other existing styles */
