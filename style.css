@@ -453,3 +453,301 @@ html, body {
 }
 
 /* Keep all other existing styles */
+
+/* ===== Base Styles ===== */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  flex: 1 0 auto;
+}
+
+/* ===== Typography ===== */
+.bold-text { font-weight: bold; }
+.bigger-bold-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* ===== Navigation ===== */
+#jerseyShoreCandleNav {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.navbar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #efefef; 
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #aebdac; 
+  font-weight: 600; 
+  font-size: 18px;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #8a9f90; 
+}
+
+/* ===== Promo Banner ===== */
+#promo-banner {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000; 
+  background-color: #aebdac; 
+}
+
+/* ===== Card Styles ===== */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.carousel {
+  flex-shrink: 0;
+}
+
+.card-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: auto;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-footer {
+  flex-shrink: 0;
+  padding: 1rem;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  padding: 15px;
+}
+
+/* ===== Buttons ===== */
+.btn-shop {
+  background-color: transparent;
+  border: 3px solid #495057;
+  color: #495057;
+  padding: 6px 16px;
+  font-weight: 600;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  min-width: 120px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-shop:hover {
+  background-color: #aebdac;
+  border-color: #aebdac;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ===== Footer Styles ===== */
+.footer-container {
+  background-color: #c9c9c9;
+  padding: 40px 0 20px;
+  width: 100%;
+  position: relative;
+}
+
+.footer-divider {
+  height: 8px;
+  background-color: #969696;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.footer-column {
+  padding: 0 30px;
+  position: relative;
+}
+
+.footer-column h4 {
+  color: #4a4a4a;
+}
+
+.faq-item, 
+.contact-link {
+  color: #6d6d6d;
+  transition: all 0.3s ease;
+}
+
+.faq-message {
+  background-color: #a8a8a8;
+  color: #333;
+}
+
+.footer-column:first-child::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  color: #6d6d6d;
+}
+
+.faq-list {
+  list-style-type: none;
+  padding-left: 0;
+  cursor: pointer;
+}
+
+.faq-item {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.faq-item:hover {
+  color: #4a4a4a;
+  padding-left: 5px;
+}
+
+.faq-item::after {
+  content: "❯";
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover::after {
+  opacity: 1;
+  right: -15px;
+}
+
+.faq-message {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact-link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-link:hover {
+  color: #4a4a4a;
+  text-decoration: underline;
+}
+
+.contact-link::after {
+  content: "✉";
+  margin-left: 5px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover::after {
+  opacity: 1;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  .carousel-item img {
+      height: 250px;
+  }
+  
+  .footer-column {
+      padding: 0 15px;
+      margin-bottom: 30px;
+  }
+  
+  .footer-column:first-child::after {
+      display: none;
+  }
+  
+  .footer-container {
+      padding: 30px 0 15px;
+  }
+}
+
+/* New Hover Image Section Styles */
+.hover-image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.hover-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.front-image {
+  opacity: 1;
+}
+
+.back-image {
+  opacity: 0;
+}
+
+.hover-image-container:hover .front-image {
+  opacity: 0;
+}
+
+.hover-image-container:hover .back-image {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hover-image-container {
+      height: 180px;
+  }
+  
+  .display-4 {
+      font-size: 2.2rem;
+  }
+}
+
