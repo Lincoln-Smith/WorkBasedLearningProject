@@ -751,3 +751,25 @@ body {
   }
 }
 
+/* Active filter style */
+.filter-collection.active {
+  background-color: #aebdac;
+  color: white !important;
+}
+
+/* Animation for filtering */
+[data-collection] {
+  transition: all 0.3s ease;
+}
+
+/* Filter Transition Styles */
+#top-content, [data-collection] {
+  transition: all 0.3s ease;
+}
+
+/* Active Filter Style */
+.filter-collection.active {
+  background-color: #aebdac;
+  color: white !important;
+}
+

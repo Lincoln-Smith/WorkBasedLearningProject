@@ -79,3 +79,96 @@ document.addEventListener('click', function(e) {
   }
 });
 
+// Collection Filter Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const filterLinks = document.querySelectorAll('.filter-collection');
+  
+  filterLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const collection = this.getAttribute('data-collection');
+      filterScents(collection);
+      
+      // Update active state
+      filterLinks.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+  
+  function filterScents(collection) {
+    const allScents = document.querySelectorAll('[data-collection]');
+    
+    allScents.forEach(scent => {
+      if (collection === 'all' || scent.getAttribute('data-collection') === collection) {
+        scent.style.display = 'block';
+      } else {
+        scent.style.display = 'none';
+      }
+    });
+    
+    // Update the URL without reloading
+    history.pushState(null, null, `?collection=${collection}`);
+  }
+  
+  // Check for collection parameter on page load
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialCollection = urlParams.get('collection') || 'all';
+  
+  // Set initial filter
+  filterScents(initialCollection);
+  
+  // Set active state for initial collection
+  document.querySelector(`.filter-collection[data-collection="${initialCollection}"]`)?.classList.add('active');
+});
+
+
+// Collection Filter Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const filterLinks = document.querySelectorAll('.filter-collection');
+  
+  filterLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const collection = this.getAttribute('data-collection');
+      filterScents(collection);
+      
+      // Update active state
+      filterLinks.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+  
+  function filterScents(collection) {
+    const allScents = document.querySelectorAll('[data-collection]');
+    const topContent = document.getElementById('top-content');
+    
+    // Show/hide top content based on selection
+    if (collection === 'all') {
+      topContent.style.display = 'block';
+    } else {
+      topContent.style.display = 'none';
+    }
+    
+    // Filter scent cards
+    allScents.forEach(scent => {
+      if (collection === 'all' || scent.getAttribute('data-collection') === collection) {
+        scent.style.display = 'block';
+      } else {
+        scent.style.display = 'none';
+      }
+    });
+    
+    // Update the URL without reloading
+    history.pushState(null, null, `?collection=${collection}`);
+  }
+  
+  // Check for collection parameter on page load
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialCollection = urlParams.get('collection') || 'all';
+  
+  // Set initial filter
+  filterScents(initialCollection);
+  
+  // Set active state for initial collection
+  document.querySelector(`.filter-collection[data-collection="${initialCollection}"]`)?.classList.add('active');
+});
