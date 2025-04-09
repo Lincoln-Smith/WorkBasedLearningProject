@@ -773,3 +773,73 @@ body {
   color: white !important;
 }
 
+/* Collection Headers */
+#collection-headers {
+  margin: 2rem 0 3rem;
+}
+
+.collection-header {
+  background-color: rgba(174, 189, 172, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.collection-header h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+.collection-header p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .collection-header h2 {
+    font-size: 1.8rem;
+  }
+  .collection-header p {
+    font-size: 1rem;
+  }
+}
+
+/* Add this to your CSS */
+#collection-headers {
+  margin: 2rem 0 3rem;
+}
+
+.collection-header {
+  background-color: rgba(174, 189, 172, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.collection-header h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+.collection-header p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .collection-header h2 {
+    font-size: 1.8rem;
+  }
+  .collection-header p {
+    font-size: 1rem;
+  }
+}
+
