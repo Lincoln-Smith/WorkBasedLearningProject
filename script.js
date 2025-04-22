@@ -1,11 +1,47 @@
-// FAQ message functions (keep your existing ones)
+// Add this to your script.js file
+function showFaqMessage(message) {
+  const messageElement = document.getElementById('faq-message');
+  
+  // Clear any existing timeout to prevent quick messages from disappearing
+  if (currentMessageTimeout) {
+    clearTimeout(currentMessageTimeout);
+  }
+  
+  // Display the message
+  messageElement.textContent = message;
+  messageElement.style.display = 'block';
+  
+  // Hide the message after 5 seconds
+  currentMessageTimeout = setTimeout(() => {
+    messageElement.style.display = 'none';
+    currentMessageTimeout = null;
+  }, 5000);
+}
+
 let currentMessageTimeout = null;
 
 function showFaqMessage(message) {
   const messageElement = document.getElementById('faq-message');
-  // ... (keep your existing FAQ code) ...
+  
+  // Clear any existing timeout to prevent quick messages from disappearing
+  if (currentMessageTimeout) {
+    clearTimeout(currentMessageTimeout);
+  }
+  
+  // Display the message
+  messageElement.textContent = message;
+  messageElement.style.display = 'block';
+  messageElement.style.opacity = '1';
+  
+  // Hide the message after 5 seconds
+  currentMessageTimeout = setTimeout(() => {
+    messageElement.style.opacity = '0';
+    setTimeout(() => {
+      messageElement.style.display = 'none';
+    }, 300); // Match this with your CSS transition time
+    currentMessageTimeout = null;
+  }, 5000);
 }
-
 // Collection Filter Functionality
 document.addEventListener('DOMContentLoaded', function() {
   const filterLinks = document.querySelectorAll('.filter-collection');
@@ -93,3 +129,4 @@ document.addEventListener('DOMContentLoaded', function() {
   // Set active state for initial collection
   document.querySelector(`.filter-collection[data-collection="${initialCollection}"]`)?.classList.add('active');
 });
+

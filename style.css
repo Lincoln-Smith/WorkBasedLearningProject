@@ -267,13 +267,40 @@ html, body {
   .faq-item, 
   .contact-link {
     color: #6d6d6d;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    padding: 2px 0;
+  }
+  
+  .contact-link:hover {
+    color: #4a4a4a;
+    text-decoration: underline;
+  }
+  
+  .contact-link::after {
+    content: "✉";
+    margin-left: 5px;
+    opacity: 0;
     transition: all 0.3s ease;
   }
   
-  /* FAQ Messages - Light Gray */
+  .contact-link:hover::after {
+    opacity: 1;
+  }
+  
   .faq-message {
-    background-color: #a8a8a8;
+    background-color: #f8f9fa;
     color: #333;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+    border-left: 4px solid #aebdac;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.9rem;
   }
   
   /* Rest of the styles (unchanged) */
@@ -842,4 +869,6 @@ body {
     font-size: 1rem;
   }
 }
+
+
 
