@@ -909,10 +909,6 @@ body {
   background-color: transparent !important; /* Remove previous background */
 }
 
-.bg-white {
-  background-color: rgba(255, 255, 255, 0.9) !important; /* Slightly more opaque */
-}
-
 .title-green {
   color: #aebdac;
   line-height: 1.2;
@@ -927,4 +923,10 @@ body {
 
 .email-link:hover {
   opacity: 0.8;
+}
+
+.bg-white {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  max-width: 1350px; /* Increased from 1200px */
+  margin: 0 auto;
 }
