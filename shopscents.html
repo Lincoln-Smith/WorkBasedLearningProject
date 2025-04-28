@@ -10,45 +10,45 @@
     </head>
 
     <body class="d-flex flex-column min-vh-100">
-      <header>
-        <div class="text-center py-2" id="promo-banner">
-          FREE SHIPPING ON ORDERS OVER $50
-        </div>
-        
-        <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
-          <div class="container-fluid flex-column text-center">
-            <a class="navbar-brand mb-2" id="jerseyShoreCandleNav" href="#">Jersey Shore Candle</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="shopscents.html">Shop Scents</a></li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="shopscents.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Shop Collections
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item filter-collection" href="#" data-collection="all">All Scents</a></li>
-                    <li><a class="dropdown-item filter-collection" href="#" data-collection="iconic">Iconic Jersey Shore Scents</a></li>
-                    <li><a class="dropdown-item filter-collection" href="#" data-collection="culinary">Culinary Best Sellers</a></li>
-                    <li><a class="dropdown-item filter-collection" href="#" data-collection="herbal">Herbal Blends</a></li>
-                    <li><a class="dropdown-item filter-collection" href="#" data-collection="winter">Winter</a></li>
-                    <li><a class="dropdown-item filter-collection" href="#" data-collection="spring">Spring</a></li>
-                    <li><a class="dropdown-item filter-collection" href="#" data-collection="summer">Summer</a></li>
-                    <li><a class="dropdown-item filter-collection" href="#" data-collection="fall">Fall</a></li>
-                    <li><a class="dropdown-item filter-collection" href="#" data-collection="jersey-strong">Jersey Strong</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="fundraisers.html">Fundraisers</a></li>
-                <li class="nav-item"><a class="nav-link" href="partyfavors.html">Party Favors</a></li>
-                <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <!-- Add this EXACT header to both shopscents.html and product.html -->
+<header>
+  <div class="text-center py-2" id="promo-banner">
+    FREE SHIPPING ON ORDERS OVER $50
+  </div>
+  
+  <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+    <div class="container-fluid flex-column text-center">
+      <a class="navbar-brand mb-2" id="jerseyShoreCandleNav" href="#">Jersey Shore Candle</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shopscents.html">Shop Scents</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="shopscents.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Shop Collections
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="all">All Scents</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="iconic">Iconic Jersey Shore Scents</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="culinary">Culinary Best Sellers</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="herbal">Herbal Blends</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="winter">Winter</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="spring">Spring</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="summer">Summer</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="fall">Fall</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="jersey-strong">Jersey Strong</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="fundraisers.html">Fundraisers</a></li>
+          <li class="nav-item"><a class="nav-link" href="partyfavors.html">Party Favors</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
       <main class="container my-5">
         <div id="top-content">
           <div class="text-center mb-5">
@@ -218,181 +218,223 @@
       
         <!-- Scent Cards Section (with data-collection attributes) -->
         <div class="row g-4">
-          <!-- Iconic Jersey Shore Scents -->
-          <div class="col-md-3 col-6" data-collection="iconic">
-            <div class="hover-image-container">
-              <img src="img/boardwalk.avif" class="img-fluid hover-image front-image" alt="Boardwalk Candle">
-              <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Boardwalk Candle Hover">
-            </div>
-            <p class="text-center mt-2">Boardwalk- The perfect blend of Boardwalk favorites in one captivating scent</p>
-          </div>
-  
-  <div class="col-md-3 col-6" data-collection="iconic">
+<!-- Iconic Jersey Shore Scents -->
+<div class="col-md-3 col-6" data-collection="iconic">
+  <a href="product.html?name=Boardwalk" class="text-decoration-none text-dark">
+    <div class="hover-image-container">
+      <img src="img/boardwalk.avif" class="img-fluid hover-image front-image" alt="Boardwalk Candle">
+      <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Boardwalk Candle Hover">
+    </div>
+    <p class="text-center mt-2">Boardwalk- The perfect blend of Boardwalk favorites in one captivating scent</p>
+  </a>
+</div>
+
+<div class="col-md-3 col-6" data-collection="iconic">
+  <a href="product.html?name=Ocean-Breeze" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/oceanBreeze.avif" class="img-fluid hover-image front-image" alt="Ocean Breeze Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Ocean Breeze Candle Hover">
     </div>
     <p class="text-center mt-2">Ocean Breeze- A reminiscent scent of walks along the beach & wonderful memories</p>
-  </div>
-  
-  <div class="col-md-3 col-6" data-collection="iconic">
+  </a>
+</div>
+
+<div class="col-md-3 col-6" data-collection="iconic">
+  <a href="product.html?name=Twisted-Creamsicle" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/twistedCream.avif" class="img-fluid hover-image front-image" alt="Twisted Cream Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Twisted Cream Candle Hover">
     </div>
-    <p class="text-center mt-2">Twisted Creamsicle- Fill your home with the scent of a ice cream Shore favorite</p>
-  </div>
-  
-  <div class="col-md-3 col-6" data-collection="iconic">
+    <p class="text-center mt-2">Twisted Creamsicle- Fill your home with the scent of an ice cream Shore favorite</p>
+  </a>
+</div>
+
+<div class="col-md-3 col-6" data-collection="iconic">
+  <a href="product.html?name=Funnel-Cake" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/funnelCake.avif" class="img-fluid hover-image front-image" alt="Funnel Cake Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Funnel Cake Candle Hover">
     </div>
     <p class="text-center mt-2">Funnel Cake- Fill your home with the warm aroma of funnel cake</p>
-  </div>
-  
-  <div class="col-md-3 col-6" data-collection="iconic">
+  </a>
+</div>
+
+<div class="col-md-3 col-6" data-collection="iconic">
+  <a href="product.html?name=Beach-House" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/beachHouse.avif" class="img-fluid hover-image front-image" alt="Beach House Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Beach House Candle Hover">
     </div>
     <p class="text-center mt-2">Beach House- A refreshing scent of cool salt air and fresh citrus notes</p>
-  </div>
-  
-  <div class="col-md-3 col-6" data-collection="iconic">
+  </a>
+</div>
+
+<div class="col-md-3 col-6" data-collection="iconic">
+  <a href="product.html?name=Salt-Water-Taffy" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/saltWaterTaffy.avif" class="img-fluid hover-image front-image" alt="Salt Water Taffy Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Salt Water Taffy Candle Hover">
     </div>
     <p class="text-center mt-2">Salt Water Taffy- The perfect blend of sweet vanilla sugar, fruits & berries</p>
-  </div>
-  
-  <!-- Culinary Best Sellers -->
-  <div class="col-md-3 col-6" data-collection="culinary">
+  </a>
+</div>
+
+<!-- Culinary Best Sellers -->
+<div class="col-md-3 col-6" data-collection="culinary">
+  <a href="product.html?name=Salted-Caramel" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/saltedCaramel.avif" class="img-fluid hover-image front-image" alt="Salted Caramel Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Salted Caramel Candle Hover">
     </div>
     <p class="text-center mt-2">Salted Caramel- A divine combination of caramelized sugar & pure vanilla</p>
-  </div>
-  
-  <div class="col-md-3 col-6" data-collection="culinary">
+  </a>
+</div>
+
+<div class="col-md-3 col-6" data-collection="culinary">
+  <a href="product.html?name=Sugar-Cookie" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/sugarCookie.avif" class="img-fluid hover-image front-image" alt="Sugar Cookie Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Sugar Cookie Candle Hover">
     </div>
     <p class="text-center mt-2">Sugar Cookie- Vanilla bean, sugar, butter and rich nutty scents</p>
-  </div>
-  
-  <div class="col-md-3 col-6" data-collection="culinary">
+  </a>
+</div>
+
+<div class="col-md-3 col-6" data-collection="culinary">
+  <a href="product.html?name=Warm-Vanilla" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/warmVanilla.avif" class="img-fluid hover-image front-image" alt="Warm Vanilla Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Warm Vanilla Candle Hover">
     </div>
     <p class="text-center mt-2">Warm Vanilla- A true vanilla scent through and through!</p>
-  </div>
-  
-  <!-- Herbal Blends -->
-  <div class="col-md-3 col-6" data-collection="herbal">
+  </a>
+</div>
+
+<!-- Herbal Blends -->
+<div class="col-md-3 col-6" data-collection="herbal">
+  <a href="product.html?name=Lemongrass-Sage" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/lemongrass.avif" class="img-fluid hover-image front-image" alt="Lemongrass Sage Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Lemongrass Sage Candle Hover">
     </div>
     <p class="text-center mt-2">Lemongrass Sage- Sparkling notes of citrus and lemongrass</p>
-  </div>
-  
-  <div class="col-md-3 col-6" data-collection="herbal">
+  </a>
+</div>
+
+<div class="col-md-3 col-6" data-collection="herbal">
+  <a href="product.html?name=Calming-Lavender" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/calmingLavender.avif" class="img-fluid hover-image front-image" alt="Calming Lavender Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Calming Lavender Candle Hover">
     </div>
-    <p class="text-center mt-2">Calming Lavender- Let the aroma of lavender fields in bloom captivate your soul.</p>
-  </div>
-  
-  <!-- Winter -->
-  <div class="col-md-3 col-6" data-collection="winter">
+    <p class="text-center mt-2">Calming Lavender- Let the aroma of lavender fields captivate your soul</p>
+  </a>
+</div>
+
+<!-- Winter -->
+<div class="col-md-3 col-6" data-collection="winter">
+  <a href="product.html?name=Home-For-Holidays" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/homeForTheHolidays.avif" class="img-fluid hover-image front-image" alt="Home For The Holidays Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Home For The Holidays Candle Hover">
     </div>
-    <p class="text-center mt-2">Home For the Holidays- A cheerful blend of cinnamon, apples and rich spices</p>
-  </div>
-  
-  <!-- Spring -->
-  <div class="col-md-3 col-6" data-collection="spring">
+    <p class="text-center mt-2">Home For the Holidays- Cheerful blend of cinnamon, apples and spices</p>
+  </a>
+</div>
+
+<!-- Spring -->
+<div class="col-md-3 col-6" data-collection="spring">
+  <a href="product.html?name=Cherry-Blossom" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/cherryBlossom.avif" class="img-fluid hover-image front-image" alt="Cherry Blossom Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Cherry Blossom Candle Hover">
     </div>
-    <p class="text-center mt-2">Cherry Blossom- Let your home bloom with the floral essence of springtime</p>
-  </div>
-  
-  <div class="col-md-3 col-6" data-collection="spring">
+    <p class="text-center mt-2">Cherry Blossom- Floral essence of springtime blooms</p>
+  </a>
+</div>
+
+<div class="col-md-3 col-6" data-collection="spring">
+  <a href="product.html?name=Fresh-Linen" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/freshLinen.avif" class="img-fluid hover-image front-image" alt="Fresh Linen Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Fresh Linen Candle Hover">
     </div>
-    <p class="text-center mt-2">Fresh Linen- What signals the arrival of Spring more than a breeze of fresh air!</p>
-  </div>
-  
-  <!-- Summer -->
-  <div class="col-md-3 col-6" data-collection="summer">
+    <p class="text-center mt-2">Fresh Linen- Breeze of fresh spring air</p>
+  </a>
+</div>
+
+<!-- Summer -->
+<div class="col-md-3 col-6" data-collection="summer">
+  <a href="product.html?name=Citronella" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/scentsOneOnOneAndOne.avif" class="img-fluid hover-image front-image" alt="Citronella Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Citronella Candle Hover">
     </div>
-    <p class="text-center mt-2">Citronella- Enjoy this powerful scent that helps ward off mosquitoes</p>
-  </div>
-  
-  <div class="col-md-3 col-6" data-collection="summer">
+    <p class="text-center mt-2">Citronella- Helps ward off mosquitoes</p>
+  </a>
+</div>
+
+<div class="col-md-3 col-6" data-collection="summer">
+  <a href="product.html?name=Cucumber-Melon" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/cucumberMelon.avif" class="img-fluid hover-image front-image" alt="Cucumber Melon Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Cucumber Melon Candle Hover">
     </div>
-    <p class="text-center mt-2">Cucumber Melon- Fresh cucumbers and a mix of sweet melons</p>
-  </div>
-  
-  <div class="col-md-3 col-6" data-collection="summer">
+    <p class="text-center mt-2">Cucumber Melon- Fresh cucumbers and sweet melons</p>
+  </a>
+</div>
+
+<div class="col-md-3 col-6" data-collection="summer">
+  <a href="product.html?name=Peaches-Cream" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/Peaches.avif" class="img-fluid hover-image front-image" alt="Peaches & Cream Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Peaches & Cream Candle Hover">
     </div>
-    <p class="text-center mt-2">Peaches & Cream- A tempting blend of sweet cream and fresh peaches</p>
-  </div>
-  
-  <!-- Fall -->
-  <div class="col-md-3 col-6" data-collection="fall">
+    <p class="text-center mt-2">Peaches & Cream- Sweet cream and fresh peaches</p>
+  </a>
+</div>
+
+<!-- Fall -->
+<div class="col-md-3 col-6" data-collection="fall">
+  <a href="product.html?name=Pumpkin-Spice" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/pumpkinSpice.avif" class="img-fluid hover-image front-image" alt="Pumpkin Spice Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Pumpkin Spice Candle Hover">
     </div>
-    <p class="text-center mt-2">Pumpkin Spice- Pureed pumpkin blended with ginger and cinnamon spice</p>
-  </div>
-  
-  <div class="col-md-3 col-6" data-collection="fall">
+    <p class="text-center mt-2">Pumpkin Spice- Pumpkin blended with spices</p>
+  </a>
+</div>
+
+<div class="col-md-3 col-6" data-collection="fall">
+  <a href="product.html?name=Baked-Apple-Pie" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/bakedApplePie.avif" class="img-fluid hover-image front-image" alt="Baked Apple Pie Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Baked Apple Pie Candle Hover">
     </div>
-    <p class="text-center mt-2">Baked Apple Pie- A delicious blend of layered warm apples, butter and spices</p>
-  </div>
-  
-  <div class="col-md-3 col-6" data-collection="fall">
+    <p class="text-center mt-2">Baked Apple Pie- Warm apples, butter and spices</p>
+  </a>
+</div>
+
+<div class="col-md-3 col-6" data-collection="fall">
+  <a href="product.html?name=Cranberry-Chutney" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/cranberry.avif" class="img-fluid hover-image front-image" alt="Cranberry Chutney Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Cranberry Chutney Candle Hover">
     </div>
-    <p class="text-center mt-2">Cranberry Chutney- This Autumn favorite is an intriguing cranberry blend</p>
-  </div>
-  
-  <!-- Jersey Strong -->
-  <div class="col-md-3 col-6" data-collection="jersey-strong">
+    <p class="text-center mt-2">Cranberry Chutney- Intriguing cranberry blend</p>
+  </a>
+</div>
+
+<!-- Jersey Strong -->
+<div class="col-md-3 col-6" data-collection="jersey-strong">
+  <a href="product.html?name=Jersey-Strong" class="text-decoration-none text-dark">
     <div class="hover-image-container">
       <img src="img/jerseyStrong.avif" class="img-fluid hover-image front-image" alt="Jersey Strong Candle">
       <img src="img/sameOld.avif" class="img-fluid hover-image back-image" alt="Jersey Strong Candle Hover">
     </div>
-    <p class="text-center mt-2">Jersey Strong- An invigorating scent that captures the strength of New Jersey</p>
-  </div>
+    <p class="text-center mt-2">Jersey Strong- Invigorating New Jersey pride</p>
+  </a>
+</div>
 </section>
 
     </main>
