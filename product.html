@@ -6,6 +6,8 @@
     <title>Product Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
   <header>
@@ -85,13 +87,18 @@
                 <h3 id="product-subtitle" class="mb-4 text-muted"></h3>
                 <p id="product-description" class="lead mb-4"></p>
                 
-                <form class="mb-4">
-                    <select class="form-select mb-3">
-                        <option>16 oz Decorative Lid ($24)</option>
-                        <option>12 oz Mason Jar ($16)</option>
-                        <option>8 oz Double Wick Tin ($10)</option>
-                    </select>
-                    <button class="btn btn-shop btn-lg w-100">Add to Cart</button>
+                <form class="mb-4" id="cartForm">
+                  <select class="form-select mb-3" id="sizeSelect">
+                    <option value="24">16 oz Decorative Lid ($24)</option>
+                    <option value="16">12 oz Mason Jar ($16)</option>
+                    <option value="10">8 oz Double Wick Tin ($10)</option>
+                  </select>
+                  <button type="button" class="btn btn-shop btn-lg w-100" 
+                          id="addToCart" 
+                          data-price="24"
+                          data-title="Boardwalk - 16 oz Decorative Lid">
+                    Add to Cart
+                  </button>
                 </form>
             </div>
         </div>
@@ -151,5 +158,25 @@
             messageTimeout = setTimeout(() => faqMessage.style.display = 'none', 5000);
         };
     </script>
+
+    <!-- Cart Structure -->
+<div class="cart--container">
+  <div class="cart--button">
+    <i class="material-icons">shopping_cart</i>
+    <span class="cart--count">0</span>
+  </div>
+  
+  <div class="cart--contents">
+    <div class="cart--contents-header">
+      <h3>Your Cart</h3>
+      <button class="close-cart">&times;</button>
+    </div>
+    <div class="cart--items"></div>
+    <div class="cart--total">
+      Total: $<span>0.00</span>
+    </div>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+</div>
 </body>
 </html>
