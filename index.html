@@ -1,38 +1,66 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Jersey Shore Candle</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jersey Shore Candle - Shop Scents</title>
+  <!-- Limelight Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+  <!-- Existing stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
 
-    <body class="d-flex flex-column min-vh-100 shop-scents-page">
-      <header>
-        <div class="text-center py-2" id="promo-banner">
-          FREE SHIPPING ON ORDERS OVER $50
-        </div>
-        
-        <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
-          <div class="container-fluid flex-column text-center">
-            <a class="navbar-brand mb-2" id="jerseyShoreCandleNav" href="#">Jersey Shore Candle</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="shopscents.html">Shop Scents</a></li>
-                <li class="nav-item"><a class="nav-link" href="shopscents.html">Shop Collections</a></li>
-                <li class="nav-item"><a class="nav-link" href="fundraisers.html">Fundraisers</a></li>
-                <li class="nav-item"><a class="nav-link" href="partyfavors.html">Party Favors</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+<!-- Updated Header Section -->
+<header>
+<div class="text-center py-2" id="promo-banner">
+  FREE SHIPPING ON ORDERS OVER $50
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+  <div class="container-fluid flex-column text-center">
+    <a class="navbar-brand mb-2 limelight-regular" id="jerseyShoreCandleNav" href="#">
+      Jersey Shore Candle
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shopscents.html">Shop Scents</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="shopscents.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Shop Collections
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="all">All Scents</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="iconic">Iconic Jersey Shore Scents</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="culinary">Culinary Best Sellers</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="herbal">Herbal Blends</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="winter">Winter</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="spring">Spring</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="summer">Summer</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="fall">Fall</a></li>
+              <li><a class="dropdown-item filter-collection" href="#" data-collection="jersey-strong">Jersey Strong</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="fundraisers.html">Fundraisers</a></li>
+          <li class="nav-item"><a class="nav-link" href="partyfavors.html">Party Favors</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html">
+              <span class="material-icons">shopping_cart</span> Cart
+              <span id="cart-count" class="badge bg-secondary">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
       
       <main class="flex-grow-1">
         <div class="test-background2 about-section-container">

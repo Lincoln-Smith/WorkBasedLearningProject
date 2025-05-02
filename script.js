@@ -109,3 +109,151 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const products = {
 };
+
+// Cart functionality for product pages
+document.addEventListener('DOMContentLoaded', function() {
+  // Add to cart button functionality
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function() {
+      // Get product details from data attributes
+      const title = this.dataset.title;
+      const price = parseFloat(this.dataset.price);
+      
+      // Get selected size from dropdown (on product page)
+      const sizeSelect = document.getElementById('sizeSelect');
+      let size = '16 oz Decorative Lid'; // default
+      if (sizeSelect) {
+        size = sizeSelect.options[sizeSelect.selectedIndex].text;
+      }
+      
+      // Get product image (on product page)
+      let image = '';
+      const mainImage = document.getElementById('mainProductImage');
+      if (mainImage && mainImage.src) {
+        image = mainImage.src;
+      } else {
+        // Fallback image if not on product page
+        image = 'img/oneAndOne.webp';
+      }
+      
+      // Get or initialize cart from localStorage
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      
+      // Check if item already exists in cart
+      const existingItemIndex = cart.findIndex(item => 
+        item.title === title && item.size === size
+      );
+      
+      if (existingItemIndex >= 0) {
+        // Update quantity if item exists
+        cart[existingItemIndex].quantity += 1;
+      } else {
+        // Add new item to cart
+        cart.push({
+          title: title,
+          price: price,
+          size: size,
+          image: image,
+          quantity: 1
+        });
+      }
+      
+      // Save cart to localStorage
+      localStorage.setItem('cart', JSON.stringify(cart));
+      
+      // Update cart count in navbar
+      updateCartCount();
+      
+      // Show confirmation
+      alert('Item added to cart!');
+    });
+  });
+  
+  // Function to update cart count in navbar
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const count = cart.reduce((total, item) => total + item.quantity, 0);
+    document.getElementById('cart-count').textContent = count;
+  }
+  
+  // Initialize cart count on page load
+  updateCartCount();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // PRODUCT PAGE AUTOLOAD
+  const params = new URLSearchParams(window.location.search);
+  if(params.has('title')) {
+      // Set text content
+      document.getElementById('product-title').textContent = decodeURIComponent(params.get('title'));
+      document.getElementById('product-subtitle').textContent = decodeURIComponent(params.get('subtitle'));
+      document.getElementById('product-description').textContent = decodeURIComponent(params.get('description'));
+      
+      // Set main product image
+      document.getElementById('mainProductImage').src = `img/${params.get('image')}`;
+      document.title = `${decodeURIComponent(params.get('title'))} | Jersey Shore Candle`;
+  }
+
+  // Add to cart functionality for product page
+  document.getElementById('addToCart')?.addEventListener('click', function() {
+    const title = document.getElementById('product-title').textContent;
+    const sizeSelect = document.getElementById('sizeSelect');
+    const selectedSize = sizeSelect.options[sizeSelect.selectedIndex].text;
+    const price = parseFloat(sizeSelect.value);
+    const image = document.getElementById('mainProductImage').src;
+    
+    // Get or initialize cart from localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Check if item already exists in cart
+    const existingItemIndex = cart.findIndex(item => 
+      item.title === title && item.size === selectedSize
+    );
+    
+    if (existingItemIndex >= 0) {
+      // Update quantity if item exists
+      cart[existingItemIndex].quantity += 1;
+    } else {
+      // Add new item to cart
+      cart.push({
+        title: `${title} - ${selectedSize}`,
+        price: price,
+        size: selectedSize,
+        image: image,
+        quantity: 1
+      });
+    }
+    
+    // Save cart to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    // Update cart count in navbar
+    updateCartCount();
+    
+    // Show confirmation
+    alert(`${title} (${selectedSize}) has been added to your cart!`);
+  });
+
+  // Function to update cart count in navbar
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const count = cart.reduce((total, item) => total + item.quantity, 0);
+    const cartCount = document.getElementById('cart-count');
+    if (cartCount) {
+      cartCount.textContent = count;
+    }
+  }
+
+  // Initialize cart count on page load
+  updateCartCount();
+
+  // FAQ MESSAGES
+  let messageTimeout;
+  window.showFaqMessage = function(message) {
+      clearTimeout(messageTimeout);
+      const faqMessage = document.getElementById('faq-message');
+      faqMessage.textContent = message;
+      faqMessage.style.display = 'block';
+      messageTimeout = setTimeout(() => faqMessage.style.display = 'none', 5000);
+  };
+});
