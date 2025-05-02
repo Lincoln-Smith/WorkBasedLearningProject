@@ -7,7 +7,28 @@ html, body {
     display: flex;
     flex-direction: column;
   }
-  
+  /* Replace existing .faq-message styles with: */
+#faq-message {
+  display: block;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 0 15px;
+  border-radius: 4px;
+  margin-top: 10px;
+  border-left: 4px solid #aebdac;
+}
+
+#faq-message.active {
+  opacity: 1;
+  height: auto;
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
   .page-container {
     flex: 1 0 auto;
   }
@@ -1116,92 +1137,26 @@ body {
           }
       }
 
-   /* Cart Styles */
-.cart--container {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 1000;
+/* Limelight Font Styles */
+.limelight-regular {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1.5px;
 }
 
-.cart--button {
-  background: #aebdac;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-  position: relative;
+/* Header Specific Styling */
+#jerseyShoreCandleNav.limelight-regular {
+  font-size: 2.7rem;
+  color: #2a2a2a;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
-.cart--count {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background: #d66624;
-  color: white;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-}
-
-.cart--contents {
-  position: absolute;
-  bottom: 70px;
-  right: 0;
-  width: 350px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  padding: 20px;
-  display: none;
-}
-
-.cart--contents.active {
-  display: block;
-}
-
-.cart--contents-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.close-cart {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.cart--items {
-  max-height: 400px;
-  overflow-y: auto;
-  margin-bottom: 20px;
-}
-
-.cart-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.checkout-btn {
-  width: 100%;
-  padding: 15px;
-  background: #aebdac;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #jerseyShoreCandleNav.limelight-regular {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
 }
