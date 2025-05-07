@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
       messageElement.classList.add('active');
       faqTimeout = setTimeout(() => messageElement.classList.remove('active'), 5000);
   };
-xxxxxxxxxxxxxxxxxxx
+
   // Collection Filter Functionality
   const filterLinks = document.querySelectorAll('.filter-collection');
   const dropdownToggle = document.querySelector('.dropdown-toggle');
