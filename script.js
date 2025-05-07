@@ -70,12 +70,43 @@ function filterScents(collection) {
   } else {
       topContent.style.display = 'none';
       collectionHeaders.style.display = 'block';
-      document.getElementById(`${collection}-header`).style.display = 'block';
+      const headerId = `${collection}-header`;
+      const headerElement = document.getElementById(headerId);
+      if (headerElement) headerElement.style.display = 'block';
+    }
+    
+    allScents.forEach(scent => {
+      scent.style.display = (collection === 'all' || scent.getAttribute('data-collection') === collection) 
+        ? 'block' 
+        : 'none';
+    });
+    
+    history.pushState(null, null, `?collection=${collection}`);
   }
-  
-  allScents.forEach(scent => {
-      scent.style.display = (collection === 'all' || scent.dataset.collection === collection) ? 'block' : 'none';
-  });
-  
-  history.pushState(null, null, `?collection=${collection}`);
-}
+
+  // Initialize collection filter from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialCollection = urlParams.get('collection') || 'all';
+  filterScents(initialCollection);
+  document.querySelector(`.filter-collection[data-collection="${initialCollection}"]`)?.classList.add('active');
+
+  // Product Page Loader
+  if (window.location.pathname.includes('product.html')) {
+    const params = new URLSearchParams(window.location.search);
+    const productName = params.get('name');
+    
+    if (productName && products[productName]) {
+      const product = products[productName];
+      document.title = `Jersey Shore Candle - ${product.title}`;
+      document.getElementById('product-title').textContent = product.title;
+      document.getElementById('product-subtitle').textContent = product.subtitle;
+      document.getElementById('product-description').textContent = product.description;
+      document.getElementById('product-image').src = `img/${product.image}`;
+    } else {
+      window.location.href = 'shopscents.html';
+    }
+  }
+});
+
+const products = {
+};
