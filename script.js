@@ -1,4 +1,3 @@
-// Global cart functions
 function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
   const count = cart.reduce((total, item) => total + item.quantity, 0);
@@ -12,7 +11,6 @@ function updateCartCount() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  // FAQ Message Handling
   let faqTimeout;
   window.showFaqMessage = function(message) {
       const messageElement = document.getElementById('faq-message');
@@ -22,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
       faqTimeout = setTimeout(() => messageElement.classList.remove('active'), 5000);
   };
 
-  // Collection Filter Functionality
   const filterLinks = document.querySelectorAll('.filter-collection');
   const dropdownToggle = document.querySelector('.dropdown-toggle');
   const dropdownMenu = document.querySelector('.dropdown-menu');
@@ -48,12 +45,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   dropdownMenu.addEventListener('hidden.bs.dropdown', () => shouldNavigateNextClick = false);
 
-  // Initialize collection filter
   const urlParams = new URLSearchParams(window.location.search);
   filterScents(urlParams.get('collection') || 'all');
   document.querySelector(`.filter-collection[data-collection="${urlParams.get('collection')}"]`)?.classList.add('active');
 
-  // Initialize cart count
   updateCartCount();
 });
 
@@ -84,13 +79,11 @@ function filterScents(collection) {
     history.pushState(null, null, `?collection=${collection}`);
   }
 
-  // Initialize collection filter from URL
   const urlParams = new URLSearchParams(window.location.search);
   const initialCollection = urlParams.get('collection') || 'all';
   filterScents(initialCollection);
   document.querySelector(`.filter-collection[data-collection="${initialCollection}"]`)?.classList.add('active');
 
-  // Product Page Loader
   if (window.location.pathname.includes('product.html')) {
     const params = new URLSearchParams(window.location.search);
     const productName = params.get('name');

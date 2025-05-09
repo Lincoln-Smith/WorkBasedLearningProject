@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Jersey Shore Candle - Your Cart</title>
-  <!-- Limelight Font -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
-  <!-- Existing stylesheets -->
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <!-- Updated Header Section -->
+
   <header>
     <div class="text-center py-2" id="promo-banner">
       FREE SHIPPING ON ORDERS OVER $50
@@ -71,7 +71,6 @@
         <h1 class="mb-4">YOUR CART</h1>
         
         <div id="cart-items">
-          <!-- Cart items will be dynamically inserted here -->
           <div class="text-center my-5">
             <p>Your cart is currently empty</p>
             <a href="shopscents.html" class="btn btn-shop">CONTINUE SHOPPING</a>
@@ -114,7 +113,6 @@
   </main>
 
   <footer class="footer-container mt-auto">
-    <!-- Your existing footer content -->
     <div class="footer-divider"></div>
     <div class="container">
       <div class="row gx-5">
@@ -146,18 +144,14 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Cart functionality
     document.addEventListener('DOMContentLoaded', function() {
-      // Load cart from localStorage
       let cart = JSON.parse(localStorage.getItem('cart')) || [];
       
-      // Update cart count in navbar
       function updateCartCount() {
         const count = cart.reduce((total, item) => total + item.quantity, 0);
         document.getElementById('cart-count').textContent = count;
       }
       
-      // Update cart display
       function updateCartDisplay() {
         const cartItemsContainer = document.getElementById('cart-items');
         const cartSubtotal = document.getElementById('cart-subtotal');
@@ -177,18 +171,15 @@
           return;
         }
         
-        // Calculate subtotal
         const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         const shipping = subtotal >= 50 ? 0 : 5.95;
         const total = subtotal + shipping;
         
-        // Update totals
         cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
         document.getElementById('cart-shipping').textContent = shipping === 0 ? 'Free Shipping' : `$${shipping.toFixed(2)}`;
         cartTotal.textContent = `$${total.toFixed(2)}`;
         checkoutBtn.disabled = false;
         
-        // Render cart items
         let cartItemsHTML = '';
         cart.forEach((item, index) => {
           cartItemsHTML += `
@@ -228,7 +219,6 @@
         
         cartItemsContainer.innerHTML = cartItemsHTML;
         
-        // Add event listeners to quantity buttons
         document.querySelectorAll('.quantity-btn').forEach(button => {
           button.addEventListener('click', function() {
             const index = parseInt(this.dataset.index);
@@ -244,7 +234,6 @@
           });
         });
         
-        // Add event listeners to remove buttons
         document.querySelectorAll('.remove-item').forEach(button => {
           button.addEventListener('click', function() {
             const index = parseInt(this.dataset.index);
@@ -253,21 +242,18 @@
           });
         });
         
-        // Update cart button
         document.getElementById('update-cart')?.addEventListener('click', function() {
           localStorage.setItem('cart', JSON.stringify(cart));
           location.reload();
         });
       }
       
-      // Update cart in localStorage and UI
       function updateCart() {
         localStorage.setItem('cart', JSON.stringify(cart));
         updateCartCount();
         updateCartDisplay();
       }
       
-      // Initialize
       updateCartCount();
       updateCartDisplay();
     });
